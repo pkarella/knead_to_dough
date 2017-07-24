@@ -8,4 +8,7 @@ class Course < ActiveRecord::Base
 
 
   scope :ten_most_recent, -> { order(created_at: :desc).limit(5)}
+
 end
+
+  

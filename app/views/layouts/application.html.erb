@@ -10,11 +10,9 @@
 
   <body>
 
-    <div class="top-nav">
+  <%= render "layouts/menu" %>
 
-    <a class = 'logo' href ="courses#index"> <%=image_tag('logo.png', class:'img') %>
-    </a>
-    </div>
+<%= render "layouts/slider" %>
 
     <div id="test" class="container-fluid">
       <%= flash[:alert] %>
