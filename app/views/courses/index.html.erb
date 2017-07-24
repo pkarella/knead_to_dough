@@ -2,7 +2,7 @@
 <div class="container">
   <div class="row">
     <div class="col-m-4">
-      <% @courses.each do |course| %>
+      <% @courses.ten_most_recent.each do |course| %>
        <li><%= link_to course.title, course_path(course) %></li>
       <% end %>
     </ul>

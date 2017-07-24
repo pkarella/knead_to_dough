@@ -5,4 +5,7 @@ class Course < ActiveRecord::Base
   validates :location, :presence => true
   validates :cost, :presence => true
   validates :description, :presence => true
+
+
+  scope :ten_most_recent, -> { order(created_at: :desc).limit(5)}
 end
