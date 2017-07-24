@@ -1,16 +1,13 @@
+  <% @courses.ten_most_recent.each do |course| %>
+    <div class="col-md-4">
+      <div class="course">
+        <li class="course-title"><%= link_to course.title, course_path(course) %></li>
 
-<div class="container">
-  <div class="row">
-    <div class="col-m-4">
-      <% @courses.ten_most_recent.each do |course| %>
-       <li><%= link_to course.title, course_path(course) %></li>
-      <% end %>
     </ul>
-    <%= link_to "New Course", new_course_path %>
+    <%= link_to "New Course", new_course_path, class: "btn-custom" %>
   <ul>
 
     </div>
 
   </div>
-
-</div>
+<% end %>
