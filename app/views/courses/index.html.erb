@@ -1,0 +1,16 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-m-4">
+      <% @courses.each do |course| %>
+       <li><%= link_to course.title, course_path(course) %></li>
+      <% end %>
+    </ul>
+    <%= link_to "New Course", new_course_path %>
+  <ul>
+
+    </div>
+
+  </div>
+
+</div>

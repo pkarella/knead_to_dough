@@ -1,0 +1,96 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+ #test{
+    padding: 50%;
+ }
+ body {
+   margin: 0;
+   padding: 0;
+   font-family: 'Roboto', sans-serif;
+   color: #333;
+ }
+ p{
+   font-size: 16px;
+   margin: 0;
+   padding: 0;
+ }
+
+ a:link{
+   text-decoration: none;
+   font-size: 16px;
+   margin: 0;
+   padding: 0;
+
+ }
+
+ h1,h2,h3,h4,h5,h6,ul,ol,li{
+   margin: 0;
+   padding: 0;
+ }
+ ul,ol,li{
+   list-style-type: none;
+ }
+
+ ::selection{
+   color: #fff;
+   background-color: #333;
+ }
+ ::-moz-selection{
+   color: #fff;
+   background-color: #333;
+ }
+
+ .clearfix::after{
+   content: '';
+   display: table;
+   clear: both;
+ }
+ /*top nav*/
+
+ .top-nav  {
+   position: fixed;
+   width:100%;
+   height:auto;
+   border-bottom: 1px solid #ccc;
+
+
+ }
+
+
+ .logo:link{
+   color: #333;
+   transition: all 0.3s ease;
+   -webkit-transition: all 0.3s ease;
+
+ }
+
+ .logo:visited{
+   color: #333;
+
+ }
+ .logo:hover{
+   display: inline-block;
+   background-color: #f1f1f1;
+ }
+ .img{
+   width: 100px;
+   padding: 20px;
+   border-right: 1px solid #ccc;
+
+ }

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Knead to Know</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <div class="top-nav">
+
+    <a class = 'logo' href ="courses#index"> <%=image_tag('logo.png', class:'img') %>
+    </a>
+    </div>
+
+    <div id="test" class="container-fluid">
+      <%= flash[:alert] %>
+  <%= flash[:notice] %>
+
+
+      <%= yield %>
+    </div>
+
+  </body>
+</html>
