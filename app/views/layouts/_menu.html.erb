@@ -1,39 +1,25 @@
 
 
 
-<!-- <div class="title">
-  <h1>Knead to Dough</h1>
-</div>
-<div id="nav-search-wrapper">
-  <form action="index.html" method="GET">
-    <input type="text" name="search" id="nav-search" placeholder="search">
-  </form>
-</div>
+<header class="navbar navbar-fixed-top">
+  <div class="container">
+    <div class="col-sm-2">
+      <%=image_tag('logo.png', class:'img') %>
 
-</div> -->
-<nav class="navbar navbar-default" role="navigation">
-    <div class="container">
-        <div class="top-nav">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
-              <a class = 'logo' href ="courses#index"> <%=image_tag('logo.png', class:'img') %>
-              </a>
-            </button>
-
-        </div>
-
-        <div class="collapse navbar-collapse" id="navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <% if current_user %>
-                    <li><%= link_to 'Edit Profile',edit_user_registration_path %></li>
-                    <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
-                    <% if current_user && current_user.admin %>
-                    <li><%= link_to 'Admin', rails_admin_path %></li>
-                    <% end %>
-
-                <% else %>
-                    <li><%= link_to 'Login', new_user_session_path %></li>
-                <% end %>
-            </ul>
-        </div>
     </div>
-</nav>
+    <nav class="col-sm-10">
+      <ul class="nav navbar-nav navbar-right">
+        <% if current_user %>
+            <li><%= link_to 'Edit Profile',edit_user_registration_path %></li>
+            <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+            <% if current_user && current_user.admin %>
+            <li><%= link_to 'Admin', rails_admin_path %></li>
+            <% end %>
+
+        <% else %>
+            <li><%= link_to 'Login', new_user_session_path %></li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+</header>

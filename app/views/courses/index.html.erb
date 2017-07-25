@@ -1,13 +1,30 @@
-  <% @courses.ten_most_recent.each do |course| %>
-    <div class="col-md-4">
-      <div class="course">
-        <li class="course-title"><%= link_to course.title, course_path(course) %></li>
 
-    </ul>
-    <%= link_to "New Course", new_course_path, class: "btn-custom" %>
-  <ul>
 
+
+
+
+<div class="album text-muted">
+  <div class="container">
+    <div class="row">
+      <% if @courses.any? %>
+        <% @courses.ten_most_recent.each do |course| %>
+        <div class="col-sm-4 mb-3">
+          <div class="card">
+            <ul>
+
+            </ul>
+            <li class="course-title"><%= link_to course.title, course_path(course) %></li>
+
+                
+
+          </div>
+        </div>
+        <% end %>
+      <% else %>
+        <h3>No Courses added yet.</h3>
+      <% end %>
     </div>
-
   </div>
-<% end %>
+</div>
+
+<%= link_to "New Course", new_course_path, class: "btn-custom" %>
