@@ -1,7 +1,10 @@
 class CoursesController < ApplicationController
+  before_action :authenticate_user!, :only => [:new]
+  
   def index
+    @current_user = current_user
       @courses = Course.all
-      
+
     end
 
     def show
