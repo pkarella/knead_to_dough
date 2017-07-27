@@ -16,9 +16,74 @@
  @import url(http://fonts.googleapis.com/css?family=Playfair+Display|Muli:300,400);
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import url(https://fonts.googleapis.com/css?family=Indie%20Flower);
+
  ul,ol,li{
     list-style-type: none;
   }
+.videotwo{
+  width:100%;
+     height:auto;
+    position: relative;
+     z-index: 25;
+     margin: 0 auto;
+     align-self: center;
+     border-bottom: 4px solid #210701;
+      border-top: 4px solid #210701;
+      border-right: 4px solid #210701;
+      border-left: 4px solid #210701;
+      border-radius: 10%;
+      box-shadow: inset 80px 80px 100px #210701;
+      margin-bottom: 50px;
+      display: inline-block;
+}
+.card{
+  text-align: center;
+
+}
+#navcook{
+  height: 80px;
+  width: auto;
+  background-color: #FBEDEA;
+  box-shadow:  0 1px 4px 0 white;
+ // background-image: linear-gradient(#641708, white);
+
+}
+.img{
+  max-height: 100%;
+  max-width: 100%;
+  position: relative;
+margin: 0 auto;
+
+}
+
+body{
+  background-image: url("background_copy.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+@mixin BoxShadowHelper($level: 1){
+  @if $level == 1 {
+    box-shadow: 0 2px 5px 0 white, 0 2px 10px 0 white;
+  }
+  @if $level == 2 {
+    box-shadow: 0 2px 5px 0 white, 0 2px 10px 0 white;
+  }
+}
+a {transition: .25s all;}
+.card {
+  border-radius: 10%;
+  background-color: #F9F5F4;
+  height: calc(100% - 15px);
+   margin-bottom: 20px;
+  overflow: hidden;
+  align-items: center;
+  @include BoxShadowHelper(1);
+  transition: .25s box-shadow;
+  &:focus,
+  &:hover {@include BoxShadowHelper(2);}
+}
+
 //  #test{
 //     padding: 50%;
 //  }
@@ -42,10 +107,12 @@
 //
 //  }
 //
-//  h1,h2,h3,h4,h5,h6,ul,ol,li{
-//    margin: 0;
-//    padding: 0;
-//  }
+ h1,h2,h3,h4,h5,h6,ul,ol,li,p{
+   font-family: Indie Flower;
+   font-size: 40px;
+   margin: 0;
+   padding: 0;
+ }
 //
 //
 //  ::selection{

@@ -1,5 +1,7 @@
 class Course < ActiveRecord::Base
   has_many :reviews
+  has_attached_file :image
+  validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
   validates :title, :presence => true
   validates :name, :presence => true
   validates :location, :presence => true
@@ -7,8 +9,6 @@ class Course < ActiveRecord::Base
   validates :description, :presence => true
 
 
-  scope :ten_most_recent, -> { order(created_at: :desc).limit(5)}
+  scope :ten_most_recent, -> { order(created_at: :desc).limit(9)}
 
 end
-
-  
